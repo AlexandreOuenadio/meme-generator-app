@@ -20,6 +20,23 @@
                 <span class="generator-or">or</span>
                 <button class="generator-button generator-button-insert">Insert</button>
             </div>
+            <div class="generator-creation">
+                <div class="generator-img-container">
+                    <!-- Canvas here-->
+                    <img src="img/no-img.jpg" alt="" id="generator-img">
+                </div>
+                <div class="generator-customization-zone">
+                    <h2 id="generator-mode">Generate your meme !</h2>
+                    <input type="text" name="text" id="text" class="geneator-meme-text" placeholder="Votre texte ici !">
+                    <div class="generator-meme-buttons-container">
+                        <button class="generator-meme-generate">Generate</button>
+                        <button class="generator-meme-submit">Création du meme !</button>
+
+                    </div>
+                    
+
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -34,25 +51,38 @@
 
         const generateBtn = document.querySelector('.generator-button-generate');
         const insertBtn = document.querySelector('.generator-button-insert');
+        const orText = document.querySelector('.generator-or')
+        const btnContainer = document.querySelector('.generator-buttons');
+        const memeCreationContainer = document.querySelector('.generator-creation');
 
-        console.log(generateBtn, insertBtn);
-        
-        anime({
+        console.log(generateBtn, insertBtn, btnContainer );
     
-        });
         
 
         
         generateBtn.addEventListener('click', () => {
+            insertBtn.style.pointerEvents = 'none';
+            orText.style.pointerEvents = 'none';
+            generateBtn.style.pointerEvents = 'none';
+            btnContainer.classList.add('generator-animate-fadeout');
+            setTimeout(() =>{
+                btnContainer.style.display = "none";
+                memeCreationContainer.style.display = "block";
+            }, 1000)
+
+            
             
         })
 
         insertBtn.addEventListener('click', () => {
-            
-        })
-
-        insertBtn.addEventListener('click', () => {
-        
+            insertBtn.style.pointerEvents = 'none';
+            orText.style.pointerEvents = 'none';
+            generateBtn.style.pointerEvents = 'none';
+            btnContainer.classList.add('generator-animate-fadeout');
+            setTimeout(() =>{
+                btnContainer.style.display = "none";
+                memeCreationContainer.style.display = "block";
+            }, 1000)
         })
 
     </script>

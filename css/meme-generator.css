@@ -5,24 +5,33 @@ body{
 
 }
 
+.generator-header{
+    padding: 30px 0;
+}
+
 .generator-title{
-    text-align: center ;
-    margin: 30px 0;
+    text-align: center;
+    color: #6c757d;
+
 }
 
 .generator-container{
     width:50%;
     margin: 0 auto;
+    height: 500px;
     min-height: 500px;
     padding:50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     background-color: #fff;
 }
 
-.generator-buttons{
 
+
+
+/* ------ BUTTONS AND ANIMATION ------ */
+.generator-buttons{
+    display: none;
+    text-align: center;
 }
 
 .generator-button{
@@ -40,7 +49,123 @@ body{
 .generator-button-insert{
     background-color: #168aad;    
 }
+
+.generator-buttons-disabled{
+    cursor: not-allowed;
+}
+
 .generator-or{
     padding: 0.8em;
     font-size: 18px;
+}
+
+.generator-animate-fadeout{
+    animation: fadeOut 1s forwards;
+}
+
+
+
+/* ------ MEME GENERATOR INTERFACE ------ */
+.generator-creation{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+
+
+}
+
+.generator-img-container{
+    width: 50%;
+    height: 100%;
+
+}
+
+.generator-img-container #generator-img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.generator-img-container{
+    
+    
+}
+
+
+#generator-img{
+
+}
+
+.generator-customization-zone{
+    width: 50%;
+    height: 100%;
+}
+
+.geneator-meme-text{
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+    border: 1px solid #f48c06;
+}
+
+.generator-meme-buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.generator-meme-generate{
+    padding: 0.5em;
+    color: #f48c06;
+    font-weight: bold;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: 1px solid;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.generator-meme-submit{
+    padding: 0.5em;
+    color: #f48c06;
+    font-weight: bold;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: 1px solid;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#generator-mode{
+    padding: 20px;
+    background-color: #f48c06;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100%{
+        opacity: 0;
+        visibility: none;
+    }
+    
 }
