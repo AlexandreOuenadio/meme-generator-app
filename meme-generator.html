@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Gerneratror</title>
+    <link rel="stylesheet" href="generator.css">
+</head>
+<body>
+    
+    <main class="generator">
+        <header class="generator-header">
+            <h1 class="generator-title">Meme generator</h1>
+        </header>
+        <div class="generator-container">
+            <div class="generator-buttons">
+                <button class="generator-button generator-button-generate ">Generate</button>
+                <span class="generator-or">or</span>
+                <button class="generator-button generator-button-insert">Insert</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        anime({
+            targets: '.generator-buttons',
+            scale: [0,1],
+            rotate: '1turn',
+            backgroundColor: '#FFF',
+            duration: 1000,
+        });
+
+        const generateBtn = document.querySelector('.generator-button-generate');
+        const insertBtn = document.querySelector('.generator-button-insert');
+
+        console.log(generateBtn, insertBtn);
+        
+        
+
+        
+        generateBtn.addEventListener('click', () => {
+            const tl = anime.timeline({
+                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
+                duration: 1000
+            });
+            tl.add({
+                targets: '.generator-button-generate',
+                translateX: -10,
+                opacity: 0,
+            });
+            tl.add({
+                targets: '.generator-button-insert',
+                opacity: 0,
+                translateX: 10,
+            });
+        })
+
+        insertBtn.addEventListener('click', () => {
+            const tl = anime.timeline({
+                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
+                duration: 500
+            });
+            tl.add({
+                targets: '.generator-button-generate',
+                translateX: -10,
+                opacity: 0,
+            });
+            tl.add({
+                targets: '.generator-button-insert',
+                opacity: 0,
+                translateX: 10,
+            }, '-=200')
+            ;
+        })
+
+        insertBtn.addEventListener('click', () => {
+            const tl = anime.timeline({
+                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
+                duration: 1000
+            });
+            tl.add({
+                targets: '.generator-button-generate',
+                translateX: -10,
+                opacity: 0,
+            });
+            tl.add({
+                targets: '.generator-button-insert',
+                opacity: 0,
+                translateX: 10,
+            }, '-=200')
+            ;
+        })
+
+    </script>
+</body>
+</html>
