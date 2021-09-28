@@ -41,30 +41,47 @@ padding: 30px 0;
 }
 
 .contact-aboutsus{
-    background-image:url("../img/youssef-naddam-iJ2IG8ckCpA-unsplash.jpg");
-    background-color: #ccc;
-  
-}
-
-.contact-contactus{
-    background-image:url("../img/annie-spratt-yI3weKNBRTc-unsplash.jpg");
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
     background-color: #ccc;
     display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    
+}
+
+.contact-aboutsus >div{
+    background-color: white;
+    box-shadow: 3px 7px 3px 1px rgba(0,0,0, 0.15);
+    height: 250px;
+    width: 250px;
+    margin:5px  ;
+}
+
+
+.contact-contactus{
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
+
+    background-color: #ccc;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
+
+
 
 .contact-contactus >div{
     flex-grow: 1;
-    border: black solid 2px;
-    padding: 2em;
-    margin:2em;
+    margin:5px  ;
+    background-color: white;
+    box-shadow: 3px 7px 3px 1px rgba(0,0,0, 0.15);
 }
 
 .contact-info{
-    background-color:green;
+    
 }
 
 .contact-email{
-    background-color: yellow;
+    
 }
