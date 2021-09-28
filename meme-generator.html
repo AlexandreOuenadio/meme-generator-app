@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Gerneratror</title>
-    <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/generator.css">
 </head>
 <body>
     
@@ -36,60 +37,22 @@
 
         console.log(generateBtn, insertBtn);
         
+        anime({
+    
+        });
         
 
         
         generateBtn.addEventListener('click', () => {
-            const tl = anime.timeline({
-                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
-                duration: 1000
-            });
-            tl.add({
-                targets: '.generator-button-generate',
-                translateX: -10,
-                opacity: 0,
-            });
-            tl.add({
-                targets: '.generator-button-insert',
-                opacity: 0,
-                translateX: 10,
-            });
+            
         })
 
         insertBtn.addEventListener('click', () => {
-            const tl = anime.timeline({
-                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
-                duration: 500
-            });
-            tl.add({
-                targets: '.generator-button-generate',
-                translateX: -10,
-                opacity: 0,
-            });
-            tl.add({
-                targets: '.generator-button-insert',
-                opacity: 0,
-                translateX: 10,
-            }, '-=200')
-            ;
+            
         })
 
         insertBtn.addEventListener('click', () => {
-            const tl = anime.timeline({
-                easing: 'cubicBezier(0.605, -0.010, 0.285, 1.000)',
-                duration: 1000
-            });
-            tl.add({
-                targets: '.generator-button-generate',
-                translateX: -10,
-                opacity: 0,
-            });
-            tl.add({
-                targets: '.generator-button-insert',
-                opacity: 0,
-                translateX: 10,
-            }, '-=200')
-            ;
+        
         })
 
     </script>
