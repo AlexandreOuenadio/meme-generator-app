@@ -10,7 +10,7 @@ body{
 }
 
 .contact-header{
-padding: 30px 0;
+    padding: 30px 0;
 }
 .contact-title{
     text-align: center;
@@ -21,7 +21,6 @@ padding: 30px 0;
 .contact-container{
     width:70%;
     min-height:700px;
-    border: black solid 3px;
     background-color: white;
     margin: 0 auto;
     display: flex;
@@ -34,34 +33,60 @@ padding: 30px 0;
 }
 
 .contact-container >div{
-    border: black solid 2px;
     min-height:700px;
     width:100%;
     padding:2em;
 }
 
-.contact-aboutsus{
+.contact-aboutus{
     background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
     background-color: #ccc;
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
 
     
 }
 
-.contact-aboutsus >div{
+.contact-aboutus-square{
     background-color: white;
     box-shadow: 3px 7px 3px 1px rgba(0,0,0, 0.15);
     height: 250px;
     width: 250px;
     margin:5px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.contact-aboutus-square:first-child{
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
+    background-color: #ccc;
+}
+
+.contact-aboutus-square:nth-child(2n){
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
+    background-color: #ccc;
+
+}
+
+.contact-aboutus-square:nth-child(3n){
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
+    background-color: #ccc;
+
+}
+
+.contact-aboutus-square:last-child{
+    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
+    background-color: #ccc;
+
 }
 
 
 .contact-contactus{
     background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-
     background-color: #ccc;
     display: flex;
     flex-direction: column;
