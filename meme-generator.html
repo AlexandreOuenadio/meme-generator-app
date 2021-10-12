@@ -31,8 +31,14 @@
                     <input type="text" name="text" id="generator-text" class="geneator-meme-text" placeholder="Votre texte ici !">
                     <div class="generator-meme-buttons-container">
                         <button class="generator-meme-generate" id="generate">Générer un meme</button>
-                        <button class="generator-meme-reposition" id="reposition">Repositionner le texte</button>
-                        <a class="generator-meme-submit" id="download" onclick="">Télécharger</a>
+                        <div class="generator-position-container">
+                            <span class="generator-positionOptions">Options</span>
+                            <div class="generator-rangeSlider-container">
+                                <input type="range" id="sliderX">
+                                <input type="range" id="sliderY">
+                            </div>
+                        </div>
+                        <a class="generator-meme-submit" id="download-btn" onclick="">Télécharger</a>
                         
                     </div>
                     
