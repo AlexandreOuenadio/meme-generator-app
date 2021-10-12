@@ -7,44 +7,56 @@
     <title>Contacts</title>
     <link rel="stylesheet" href="css/config.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/contact.js" defer></script>
 </head>
 <body>
     <main class="contact">
-        <header class="contact-header">
-            <h1 class="contact-title">Contact us</h1>
+        <header id="header" class="contact-header">
+            
         </header>  
-        <div class="contact-container">
-            <div class="contact-aboutus">
-               <div class="contact-aboutus-square">
-                   <h1>Mail Us</h1>
-                   <p>Contact us by mail on we.are@stealing.yourmoney </p>
-                   <button  >Mail Us</button>
-            </div>
+        
+        <section class="contact-info">
+           
+            <h1 class="contact-title">Contact</h1>
+            <div class="contact-info-container">
+                <div class="contact-info-square">
+                    <h1 class="contact-square-title">Mail Us</h1>
+                    <p class="contact-text">Contact us by mail on we.are@stealing.yourmoney </p>
+                    <button  >Mail Us</button>
+                </div>
 
-               <div class="contact-aboutus-square">
-                    <h1>Call Us</h1>
-                    <p>Contact us by phone on +3309112001 </p>
+                <div class="contact-info-square">
+                    <h1 class="contact-square-title">Call Us</h1>
+                    <p class="contact-text">Contact us by phone on +3309112001 </p>
                     <button >Call Us</button>
-               </div>
+                </div>
 
-               <div class="contact-aboutus-square">
-                    <h1>Mail Us</h1>
-                    <p>Contact us by mail on we.are@stealing.yourmoney </p>
+                <div class="contact-info-square">
+                    <h1 class="contact-square-title">Mail Us</h1>
+                    <p class="contact-text">Contact us by mail on we.are@stealing.yourmoney </p>
                     <button >Mail Us</button>
-               </div>
-
-               <div class="contact-aboutus-square">
-                <h1>Mail Us</h1>
-                <p>Contact us by mail on we.are@stealing.yourmoney </p>
-                <button >Mail Us</button>
-               </div>
-
+                </div>
             </div>
-            <div class="contact-contactus">
-                <div class="contact-info"></div>
-                <div class="contact-email"></div>
+        </section>
+
+        <section class="contact-typebox">
+            <div class="contact-aboutus">
+                <h1 class="contact-title">A propos</h1>
+                <div class="contact-aboutus-square">
+                    <p class="contact-text">Nous sommes des devellopeurs independants, 
+                        envoyez-nous un commentaire si vous avez aimés ou pas nos produits. 
+                        Tous les commentaires sont pris en compte afin d'apporter la meilleure expercience possible</p>
+                </div>
+                <form class="contact-aboutus-square contact-emailbox" action="">
+                    <input type="text" name="text" id="username" class="contact-textinput" placeholder="Votre username ici">
+                    <input type="text" name="text" id="mail" class="contact-textinput" placeholder="Votre mail ici">
+                    <input type="text" name="text" id="message" class="contact-textinput" placeholder="Votre message ici">
+                    <button id="benvoyer">Envoyer</button>
+                </form>
             </div>
-        </div>
+        </section>
+
     </main>
 </body>
 </html>

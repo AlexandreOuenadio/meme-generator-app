@@ -10,103 +10,124 @@ body{
 }
 
 .contact-header{
-    padding: 30px 0;
+    height: 6vh;
+    background-color: white;
 }
+
 .contact-title{
+    margin-top: 10px;
+    padding: 10px;
     text-align: center;
-    font-size: 2.5em;
+    font-size:3em;
+    color: white;
+    background-color: #f48c06;
     
 }
 
-.contact-container{
-    width:70%;
-    min-height:700px;
-    background-color: white;
-    margin: 0 auto;
+.contact-text{
+    color: #f48c06;
+}
+
+/*First section --> Contact Informtions*/
+.contact-info{
+    height: 94vh;
+    background-color: #f3f0ec;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 30px;
-    gap:30px;
+    justify-content: space-between ;
+    
      
 }
 
-.contact-container >div{
-    min-height:700px;
+
+
+.contact-info-container{
     width:100%;
-    padding:2em;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
 }
 
-.contact-aboutus{
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+
+.contact-info-square{  
+    
+    margin:5px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    
+}
+
+.contact-square-title{
+    padding: 10px;
+    font-size:1.5em;
+    color: white;
+    background-color: #f48c06;  
+}
+
+
+
+
+/*Second section --> Contact us Type box */
+.contact-typebox{
+    height:100vh;
+    background-color: #f3f0ec;
 
     
+}
+
+
+.contact-aboutus{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    
+}
+.contact-aboutus-square{
+    margin:5px  ;
+    max-width: 50%;
 }
 
 .contact-aboutus-square{
-    background-color: white;
-    box-shadow: 3px 7px 3px 1px rgba(0,0,0, 0.15);
-    height: 250px;
-    width: 250px;
-    margin:5px  ;
+  
+}
+
+.contact-emailbox{
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: left;
+}
+.contact-textinput{
+    padding: 0px 10px;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #f48c06;
 }
 
-.contact-aboutus-square:first-child{
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-}
-
-.contact-aboutus-square:nth-child(2n){
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-
-}
-
-.contact-aboutus-square:nth-child(3n){
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-
-}
-
-.contact-aboutus-square:last-child{
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-
-}
-
-
-.contact-contactus{
-    background-image:url("../img/paul-berthelon-bravo-BGXhuJIbx78-unsplash\(1\).jpg");
-    background-color: #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
-
-
-.contact-contactus >div{
+#username{
+    width: 50%;
     flex-grow: 1;
-    margin:5px  ;
-    background-color: white;
-    box-shadow: 3px 7px 3px 1px rgba(0,0,0, 0.15);
 }
-
-.contact-info{
-    
+#mail{
+    width: 50%;
+    flex-grow: 1;
 }
-
-.contact-email{
+#message{
     
+    width: 100%;
+    flex-grow: 8;
+
+}
+#benvoyer{
+    flex-grow: 1;
 }
