@@ -97,11 +97,8 @@ body{
     width: 45%;
 }
 
-
-
-.generator-meme-buttons-container{
-    display: flex;
-    flex-direction: column;
+.generator-parameters-container{
+    padding: 30px 0;
 }
 
 
@@ -117,21 +114,41 @@ body{
     cursor: pointer;
     border-radius: 5px;
 }
+        
+
+
+
+.generator-meme-texts-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.generator-text-choice-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.generator-text-choice-item{
+
+}
+
 
 
     /*-- MEME TEXT INPUT --*/ 
 .geneator-meme-textInput{
+    margin-bottom: 15px;
     padding: 0.5em;
     display: block;
     width: 100%;
-    margin: 30px 0;
     border: 1px solid #f48c06;
 }
 
     /*-- RANGE SLIDERS --*/ 
 
 .generator-position-container{
-    margin: 20px 0;
+
     border: 1px solid #f48c06;
     padding: 20px;
 }
