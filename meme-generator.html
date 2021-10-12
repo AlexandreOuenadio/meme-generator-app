@@ -28,17 +28,27 @@
                 </div>
                 <div class="generator-customization-zone">
                     <h2 id="generator-mode">Génération de meme</h2>
-                    <input type="text" name="text" id="generator-text" class="geneator-meme-text" placeholder="Votre texte ici !">
+                    <input type="text" name="text" id="generator-text" class="geneator-meme-textInput" placeholder="Votre texte ici !">
                     <div class="generator-meme-buttons-container">
-                        <button class="generator-meme-generate" id="generate">Générer un meme</button>
+                        <button class="generator-meme-generateBtn" id="generate">Générer un meme</button>
                         <div class="generator-position-container">
-                            <span class="generator-positionOptions">Options</span>
-                            <div class="generator-rangeSlider-container">
-                                <input type="range" id="sliderX">
-                                <input type="range" id="sliderY">
+                            <span class="generator-positionText">Paramètres du texte</span>
+                            <div class="generator-rangeSliders-container">
+                                <div class="generator-rangeSliders-item">
+                                    <label for="sliderX">Position horizontale</label>
+                                    <input type="range" id="sliderX" class="generator-rangeSlider">
+                                </div>
+                                <div class="generator-rangeSliders-item">
+                                    <label for="sliderY">Position verticale</label>
+                                    <input type="range" id="sliderY" class="generator-rangeSlider">
+                                </div>
+                                <div class="generator-rangeSliders-item">
+                                    <label for="meme-text-size">Taille du texte</label>
+                                    <input type="range" id="meme-text-size" class="generator-rangeSlider">
+                                </div>
                             </div>
                         </div>
-                        <a class="generator-meme-submit" id="download-btn" onclick="">Télécharger</a>
+                        <a class="generator-meme-downloadBtn" id="download-btn" onclick="">Télécharger</a>
                         
                     </div>
                     
