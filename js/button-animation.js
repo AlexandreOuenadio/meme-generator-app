@@ -12,7 +12,6 @@ const orText = document.querySelector('.generator-or')
 const btnContainer = document.querySelector('.generator-buttons');
 const memeCreationContainer = document.querySelector('.generator-creation');
 
-console.log(generateBtn, insertBtn, btnContainer );
 
 
 
