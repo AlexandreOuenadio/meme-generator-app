@@ -17,11 +17,11 @@
         
         <div class="generator-container">
             <div class="generator-buttons">
-                <button class="generator-button generator-button-generate ">Generate</button>
-                <span class="generator-or">or</span>
-                <button class="generator-button generator-button-insert">Insert</button>
+                <button class="generator-button generator-button-generate ">Générer votre meme !</button>
+                <span class="generator-or">ou</span>
+                <button class="generator-button generator-button-insert">Uploader votre meme !</button>
             </div>
-            <div class="generator-creation">
+            <div class="generator-creation" id='generator-creation'>
                 <div class="generator-img-container" id="img-container" >
                     <!-- Canvas here-->
                     <canvas id="generator-canvas"></canvas>
@@ -29,11 +29,14 @@
                 </div>
                 <div class="generator-customization-zone">
                     
-                    <h2 id="generator-mode">Génération de meme</h2>
+                    <h2 id="generator-mode-title">Génération de meme</h2>
 
                     <div class="generator-parameters-container">
 
-                        <button class="generator-meme-generateBtn" id="generate">Générer un meme</button>
+                        <button class="generator-meme-generateBtn" id="generator-mode-action">Générer un meme</button>
+                        <label for="file-input" class="generator-meme-generateBtn"> Uploader votre meme !</label>
+                        <input type="file" style='visibility: hidden;' id="file-input">
+                        
 
                         <div class="generator-meme-texts-container" id="texts-container" >
                             <div class="generator-text-choice-container">
