@@ -1,6 +1,12 @@
 /* --- HOME NAVIGATION --- */
 
 #header{
+    display:relative;
+    height:65px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
 
 }
 
@@ -29,6 +35,10 @@
     margin-left: 30px;
     padding: 10px;
     background-color:#f48c06;
+}
+
+.home-navigation-list-item:last-child{
+    margin-left: auto;
 }
 
 .header-title{  
