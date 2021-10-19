@@ -3,19 +3,14 @@ body{
 }
 
 .contact{
-    height:100vh;
-    min-height:100vh;
+    
     position: relative;
     
 }
 
-.contact-header{
-    height: 6vh;
-    background-color: white;
-}
 
 .contact-title{
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 10px;
     text-align: center;
     font-size:3em;
@@ -30,7 +25,7 @@ body{
 
 /*First section --> Contact Informtions*/
 .contact-info{
-    height: 94vh;
+    height: 100vh;
     background-color: #f3f0ec;
     display: flex;
     flex-direction: column;
