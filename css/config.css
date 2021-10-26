@@ -16,6 +16,62 @@ a{
 
 }
 
+
+/* --- NAVIGATION --- */
+
+#header{
+    display:relative;
+    height:65px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+
+}
+
+
+.header-navigation{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 30px;
+    position: absolute;
+    z-index: 1000;
+    color: #fff;
+    width: 100%;
+}
+
+.header-navigation-list{
+    display: flex;
+    justify-content: flex-end;
+
+
+}   
+
+.header-navigation-list-item{
+    list-style: none;
+    font-weight: bold;
+    margin-left: 30px;
+    padding: 10px;
+    background-color:#f48c06;
+}
+
+.home-navigation-list-item:last-child{
+    margin-left: auto;
+}
+
+.header-title{  
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 10px;
+    padding: 10px;
+    background-color:#f48c06;
+}
+
+
+
+
 @font-face {
     font-family: 'Open sans', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
