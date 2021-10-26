@@ -1,0 +1,15 @@
+{
+    "products":[
+        {
+            "name":"Shirt",
+            "image":"tshirt-white.png",
+            "price":10
+        },
+
+        {
+            "name":"Hoodie",
+            "image":"White-Hoodie.png",
+            "price":5
+        }
+    ]
+}

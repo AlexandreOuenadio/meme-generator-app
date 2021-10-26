@@ -1,21 +1,40 @@
+body{
+    height: 100vh;
+}
 .boutique{
+    background-color: #f3f0ec;
+    min-height: 80%;
     padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 
 
 }
 
-.produit-container{
-    width: 80%;
+.boutique-title{
+    height: 20%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size:3em;
+    color: white;
+    background-color: #f48c06;
+}
+
+#product-grid{
+    height: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2,500px);
+    grid-template-columns: repeat(2,40%);
     grid-column-gap: 70px;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.boutique-produit{
-    min-height: 500px;
-    background-color: blue;
+.product-info{
+    height: 100%;
+    
 }
 
