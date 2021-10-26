@@ -3,13 +3,12 @@ fetch("../header.html")
     .then(texte=>{
         const header = document.getElementById("header")
         header.innerHTML = texte;
-        if (location.pathname==("/index.html")){
+        if (location.pathname=="/index.html" || location.pathname=="/"){
             document.getElementsByClassName("header-title")[0].style.visibility= 'hidden' 
             header.style.position="absolute";
             header.style.backgroundColor = 'transparent';
-            const navHTMLCollection = document.querySelectorAll(".home-navigation-list-item");
+            const navHTMLCollection = document.querySelectorAll(".header-navigation-list-item");
             const nav = Array.prototype.slice.call(navHTMLCollection);
-            console.log(nav)
             nav.forEach(
                 (element, index) =>{
                     element.style.background ="transparent"

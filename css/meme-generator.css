@@ -110,7 +110,7 @@ body{
 
 
     /*-- MEME GENERATE INPUT  --*/ 
-.generator-meme-generateBtn{
+.generator-generateBtn{
     padding: 0.2em;
     color: #f48c06;
     font-weight: bold;
@@ -121,11 +121,15 @@ body{
     cursor: pointer;
     border-radius: 5px;
 }
+
+#generator-insertBtn{
+    display: none;
+}
         
 
 
 
-.generator-meme-texts-container{
+.generator-texts-container{
     display: none;
     flex-direction: column;
     margin: 10px 0;
@@ -237,7 +241,7 @@ body{
   }
 
     /*-- MEME DOWNLOAD BUTTON --*/ 
-.generator-meme-downloadBtn{
+.generator-downloadBtn{
     display: none;
     text-align: center;
     padding: 0.2em;
