@@ -3,19 +3,20 @@ fetch("../header.html")
     .then(texte=>{
         const header = document.getElementById("header")
         header.innerHTML = texte;
-        if (location.pathname==("/index.html")){
-            document.getElementsByClassName("header-title")[0].style.visibility= 'hidden' 
+        feather.replace();
+        if (location.pathname=="/index.html" || location.pathname=="/"){
             header.style.position="absolute";
             header.style.backgroundColor = 'transparent';
-            const navHTMLCollection = document.querySelectorAll(".home-navigation-list-item");
+            const navHTMLCollection = document.querySelectorAll(".header-navigation-list-item");
             const nav = Array.prototype.slice.call(navHTMLCollection);
-            console.log(nav)
             nav.forEach(
                 (element, index) =>{
-                    element.style.background ="transparent"
+                    element.style.color = "white";
+                    element.style.background ="transparent";
                 }
             )
         }
 
 
 })
+
