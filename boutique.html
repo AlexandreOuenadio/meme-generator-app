@@ -17,14 +17,19 @@
 <body>
     <header id="header"></header>
     <main class="boutique">
-        <h1 class="boutique-title">Boutique</h1>
-        <div id="boutique-grid">
-        <template id ="boutique-product">
-                <img src="img/{{image-Product}}" class="product-image">
-                <div class="product-info">
-                    <h1>{{name-Product}}</h1>
+        <div class="boutique-container">
+            <h1 class="boutique-title">Boutique</h1>
+            <div id="boutique-product-container">
+                <template id ="boutique-product">
+                    <div class="boutique-product-showcase">
+                        <img src="img/{{image-Product}}" class="product-image">
+                        <div class="product-info">
+                            <h1>{{name-Product}}</h1>
+                            <h2>Prix:{{price-Product}}$</h2>
+                        </div>
+                    </div>
+                </template>
             </div>
-        </template>
         </div>
     </main>
     

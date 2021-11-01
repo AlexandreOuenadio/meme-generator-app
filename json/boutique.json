@@ -1,7 +1,7 @@
 {
     "products":[
         {
-            "name":"Shirt",
+            "name":"T-Shirt",
             "image":"tshirt-white.png",
             "price":10
         },
@@ -9,7 +9,19 @@
         {
             "name":"Hoodie",
             "image":"White-Hoodie.png",
+            "price":15
+        },
+
+        {
+            "name":"Mug",
+            "image":"Mug-white.png",
             "price":5
+        },
+
+        {
+            "name":"Pillow",
+            "image":"pillow-white.png",
+            "price":20  
         }
     ]
 }
