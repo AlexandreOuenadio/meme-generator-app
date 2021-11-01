@@ -1,9 +1,7 @@
-body{
-    background-color:  #f3f0ec;
-}
 .generator{ 
-    min-height: 100vh;
-    padding: 50px 0;
+    min-height: calc(100vh - 65px);
+    padding-bottom: 50px;
+    background-color:  #f3f0ec;
 
 }
 
@@ -12,8 +10,10 @@ body{
 }
 
 .generator-title{
+    background-color: #f48c06;
+    color: #fff; 
     text-align: center;
-    color: #6c757d;
+    padding: 15px 0;
 
 }
 
@@ -23,6 +23,8 @@ body{
     padding:50px;
     overflow: hidden;
     background-color: #fff;
+    margin: 30px auto;
+    margin-bottom: 0;
 }
 
 
