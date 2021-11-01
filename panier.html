@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/panier.css">
+    <script defer src="https://unpkg.com/feather-icons"></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/icones.js" defer></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="js/button-animation.js"></script>
+    <script defer src="js/after-button-animation.js"></script>
+</head>
+<body>
+    <header id="header" >
+    </header> 
+    <main class="cart">
+        <h1 class="cart-title">Panier</h1>
+        <div class="tables-container">
+            <div class="tables">
+                <table class="table-articles">
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Sous-total</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td-container">
+                                <div class="product">
+                                    <img src="img/tshirt-white.png" alt="">
+                                    <div class="product-card">
+                                        <p>Nom du produit: T-shirt </p>
+                                        <p>Couleur: Blanc</p>
+                                        <p>Prix: 50,00€</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                <input type="number" value="1" min='1'>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                50,00€
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td-container">
+                                <div class="product">
+                                    <img src="img/tshirt-white.png" alt="">
+                                    <div class="product-card">
+                                        <p>Nom du produit: T-shirt </p>
+                                        <p>Couleur: Blanc</p>
+                                        <p>Prix: 50,00€</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                <input type="number" value="1" min='1'>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                50,00€
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td-container">
+                                <div class="product">
+                                    <img src="img/tshirt-white.png" alt="">
+                                    <div class="product-card">
+                                        <p>Nom du produit: T-shirt </p>
+                                        <p>Couleur: Blanc</p>
+                                        <p>Prix: 50,00€</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                <input type="number" value="1" min='1'>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-container">
+                                50,00€
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table-total-price">
+                    <tr>
+                        <th>Subtotal</th>
+                        <td>50,00€</td>
+                    </tr>
+                    <tr>
+                        <th>Tax</th>
+                        <td>50,00€</td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td>100,00€</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </main>
+</body>
