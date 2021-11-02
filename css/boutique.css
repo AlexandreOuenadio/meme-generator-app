@@ -51,3 +51,8 @@ body{
 .product-info{
 
 }
+
+.product-link:hover{
+    opacity:0.4
+    
+}

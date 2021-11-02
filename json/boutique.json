@@ -3,25 +3,30 @@
         {
             "name":"T-Shirt",
             "image":"tshirt-white.png",
-            "price":10
+            "price":10,
+            "id":1
+
         },
 
         {
             "name":"Hoodie",
             "image":"White-Hoodie.png",
-            "price":15
+            "price":15,
+            "id":2
         },
 
         {
             "name":"Mug",
             "image":"Mug-white.png",
-            "price":5
+            "price":5,
+            "id":3
         },
 
         {
             "name":"Pillow",
             "image":"pillow-white.png",
-            "price":20  
+            "price":20,
+            "id":4  
         }
     ]
 }
