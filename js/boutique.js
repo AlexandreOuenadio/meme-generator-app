@@ -21,7 +21,6 @@ function cloner(prod){
 /*On prend les informations du fichier JSON et on les ajoute sur la page*/ 
 fetch("json/boutique.json")
 .then(function(response){
-    console.log(response);
     return response.json();
 
 })

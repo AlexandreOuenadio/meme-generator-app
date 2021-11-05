@@ -3,9 +3,6 @@ fetch("../footer.html")
     .then(texte=>{
         const footer = document.getElementById("footer")
         footer.innerHTML = texte;
-        feather.replace();
         
-
-
 })
 
