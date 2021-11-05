@@ -8,6 +8,7 @@
 
 html{
     font-family: 'Open sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -26,7 +27,7 @@ a{
     align-items: center;
     justify-content: flex-end;
     background-color: white;
-
+    
 }
 
 
@@ -94,6 +95,8 @@ a{
     font-family: 'Open sans', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 }
+
+
 /* --- FOOTER --- */
 
 #footer{
@@ -111,7 +114,6 @@ a{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    position: absolute;
 }
 
 .footer-title{
@@ -138,5 +140,5 @@ a{
 
 .footer-link:hover{
     color: #f48c06;
-    
+    cursor:pointer;
 }

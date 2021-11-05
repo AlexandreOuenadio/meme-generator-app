@@ -10,6 +10,7 @@
     <script defer src="https://unpkg.com/feather-icons"></script>
     <script src="js/header.js" defer></script>
     <script src="js/icones.js" defer></script>
+    <script src="js/footer.js" defer></script>
 </head>
 <body>
     <header id="header" ></header> 
@@ -21,28 +22,31 @@
             <h1 class="contact-title">Contactez-nous</h1>
             <div class="contact-info-container">
                 <div class="contact-info-square">
-                    <h1 class="contact-square-title">Mail Us</h1>
-                    <p class="contact-text">zmichalop@gmail.com</p>
+                    <h1 class="contact-square-title">Envoyez-nous un email</h1>
+                    <a href="#section2" class="contact-square-image contact-square-image-mail"></a>
+                    <p class="contact-text">Email: zmichalop@gmail.com</p>
                 </div>
 
                 <div class="contact-info-square">
-                    <h1 class="contact-square-title">Call Us</h1>
-                    <p class="contact-text">+3309112001 </p>
+                    <h1 class="contact-square-title">Appelez-nous</h1>
+                    <a href="tel:+330783959486" class="contact-square-image contact-square-image-phone"></a>
+                    <p class="contact-text">Tel: +330783959486 </p>
                 </div>
 
                 <div class="contact-info-square">
-                    <h1 class="contact-square-title" >Find Us</h1>
+                    <h1 class="contact-square-title" >Trouvez-nous</h1>
                     <iframe id="contact-map" 
                         style="border:0"
                         loading="lazy"
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfohSBF8EuXri2Vsh6QSsiJzFYJQYAtbM&q=CPE+Lyon">
                     </iframe>
+                    <p class="contact-text">Adresse: Villeurbanne 69100</p>
                 </div>
             </div>
         </section>
 
-        <section class="contact-typebox">
+        <section class="contact-typebox" id="section2">
             <div class="contact-aboutus">
                 <h1 class="contact-title">A propos</h1>
                 <div class="contact-aboutus-square">
@@ -51,14 +55,15 @@
                         Tous les commentaires sont pris en compte afin d'apporter la meilleure expercience possible</p>
                 </div>
                 <form class="contact-aboutus-square contact-emailbox" action="">
-                    <input type="text" name="text" id="username" class="contact-textinput" placeholder="Votre username ici">
-                    <input type="text" name="text" id="mail" class="contact-textinput" placeholder="Votre mail ici">
-                    <input type="text" name="text" id="message" class="contact-textinput" placeholder="Votre message ici">
+                    <input type="text" name="mail" id="mail" class="contact-textinput" placeholder="Votre email ici">
+                    <input type="text" name="objet" id="objet" class="contact-textinput" placeholder="L'Objet de l'email ici" value="Demande de renseignements">
+                    <textarea  rows="5" cols="30" name="message" id="message" class="contact-textinput" >Bonjour, je souhaiterais obtenir des renseignements sur</textarea>
                     <button id="benvoyer">Envoyer</button>
                 </form>
             </div>
         </section>
 
     </main>
+    <footer id="footer"></footer>
 </body>
-</html>
+</html> 
