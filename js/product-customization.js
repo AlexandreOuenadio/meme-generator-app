@@ -1,6 +1,12 @@
-// ------------------- DOM ------------------- 
-const canvas = document.getElementById('generator-canvas');
-const ctx = canvas.getContext('2d');
+// ------------------- DOM -------------------
+    //LES CANVAS
+const canvasMeme = document.getElementById('generator-canvas-meme');
+const canvasProduct = document.getElementById('generator-canvas-product');
+    //LES CONTEXTES
+const ctxProduct = canvasMeme.getContext('2d');
+const ctxMeme = canvasMeme.getContext('2d');
+
+
 
 const downloadBtn = document.getElementById("download-btn");
 const memeText = document.getElementById('generator-text');
@@ -30,6 +36,9 @@ const insertBtnFileInput = document.getElementById('generator-insertBtn');
 const positionOptionsLabels = document.querySelectorAll('.generator-text-choice-item label');
 const positionTitle = document.querySelector('.generator-positionText');
 const rangeSliders = document.querySelectorAll('.generator-rangeSlider');
+
+
+
 
 //Constantes
 memeTextSize.min = 16;
@@ -69,13 +78,40 @@ const texts = [
   }
 ];
 
+/*
+
+const id = location.href.split('=')[1];
+async function displayProduct(id){
+    const product = await findProductById(+id);
+    const productImg = new Image();
+    productImg.src = "img/" + product[0].img;
+    console.log(productImg.src);
+
+    productImg.onload = () =>{
+        canvasProduct.width = productImg.width;
+        canvasProduct.height= productImg.height;
+        ctxProduct.drawImage(productImg, 0,0);
+        console.log("image produit");
+    }
+
+
+
+}
+
+displayProduct(id);
+
+*/
+
+
+
+
+
 
 
 
 
 
 //--------------------- DEFINITIONS DES EVENENEMENTS --------------------
-
 
 //MENU "GENERER OU UPLOADER" 
 generateMenuBtn.addEventListener('click', () => {
@@ -85,7 +121,7 @@ generateMenuBtn.addEventListener('click', () => {
     btnContainer.classList.add('generator-animate-fadeout');
     isGenerate = true;
     if(isGenerate){
-        generateBtn.addEventListener('click', generateImg);
+        generateBtn.addEventListener('click', generateMeme);
     }else{
         insertBtnFileInput.addEventListener('change', uploadImg);
     }
@@ -106,7 +142,7 @@ insertMenuBtn.addEventListener('click', () => {
     btnContainer.classList.add('generator-animate-fadeout');
     isGenerate = false;
     if(isGenerate){
-        generateBtn.addEventListener('click', generateImg);
+        generateBtn.addEventListener('click', generateMeme);
     }else{
         insertBtnFileInput.addEventListener('change', uploadImg);
     }
@@ -164,7 +200,17 @@ downloadBtn.addEventListener('click', downloadMeme);
 
 
 
+
+
+
 // ----------- FONCTIONS -----------
+async function findProductById(id){
+    const reponse = await fetch('../json/boutique.json');
+    const produits = await reponse.json();
+    const produit = produits.products.filter(element => element.id === id);
+
+    return produit;
+}
 
 function findActiveText(){
   return +textOptions.filter(text => text.checked == 1)[0].id;
@@ -203,23 +249,23 @@ function updateTextsObjects(id){
 }
 
 function updateCanvas(img){
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  ctx.drawImage(img, 0,0);
-  ctx.lineWidth = Math.floor(texts[0].fontSize/4);
-  ctx.lineJoin = 'round';
-  ctx.fillStyle = "#fff";
-  ctx.font =  texts[0].fontSize + "px sans-serif";
+  ctxMeme.clearRect(0,0, canvasMeme.width, canvasMeme.height);
+  ctxMeme.drawImage(img, 0,0);
+  ctxMeme.lineWidth = Math.floor(texts[0].fontSize/4);
+  ctxMeme.lineJoin = 'round';
+  ctxMeme.fillStyle = "#fff";
+  ctxMeme.font =  texts[0].fontSize + "px sans-serif";
 
 
   for (let i=0; i < texts.length; i++){
-    ctx.strokeText(texts[i].text, texts[i].x,texts[i].y);
-    ctx.fillText(texts[i].text, texts[i].x,texts[i].y);
+    ctxMeme.strokeText(texts[i].text, texts[i].x,texts[i].y);
+    ctxMeme.fillText(texts[i].text, texts[i].x,texts[i].y);
   }
 
   isMeme = true;
 }
 
-async function generateImg(){
+async function generateMeme(){
   console.log("generation !!!");
   //RESET INPUTS
   texts.forEach(text => {
@@ -247,25 +293,25 @@ async function generateImg(){
 
   img.addEventListener('load', () =>{
     //On néttoie le canvas
-    ctx.clearRect(0,0, canvas.width, canvas.height);
+    ctxMeme.clearRect(0,0, canvasMeme.width, canvasMeme.height);
     
     //Le canvas prend les dimensions de l'image à charger
-    canvas.width = img.width;
-    canvas.height = img.height;
+    canvasMeme.width = img.width;
+    canvasMeme.height = img.height;
     texts.forEach(text => {
-      text.x = canvas.width/2;
-      text.y = canvas.height/2;
+      text.x = canvasMeme.width/2;
+      text.y = canvasMeme.height/2;
     });
     //Les extremums des sliders sont définis à partir des dimensions du canvas
     sliderX.min = 0;
-    sliderX.max = canvas.width;
+    sliderX.max = canvasMeme.width;
     sliderY.min = 0;
-    sliderY.max = canvas.height;
+    sliderY.max = canvasMeme.height;
 
     downloadBtn.style.display = 'block';
     textsContainer.style.display = 'flex';
     //On déssine l'image sur le canvas
-    ctx.drawImage(img, 0,0);
+    ctxMeme.drawImage(img, 0,0);
 
     //dès qu'on a choisi un texte on affiche ses options
     textOptions.forEach((text,id) => {
@@ -282,7 +328,7 @@ async function generateImg(){
     });
 
     //dès qu'on modifie un texte on cherche lequel c'est puis on le réactualise dans le canvas
-    memeText.addEventListener('change', ()=> {
+    memeText.addEventListener('input', ()=> {
       const activeText = findActiveText();
       console.log('activeText:', activeText);
       updateTextsObjects(activeText);
@@ -291,21 +337,21 @@ async function generateImg(){
 
     });
 
-    sliderX.addEventListener('change', ()=> {
+    sliderX.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
     });
 
-    sliderY.addEventListener('change', ()=> {
+    sliderY.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
     });
 
-    memeTextSize.addEventListener('change', ()=> {
+    memeTextSize.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
@@ -342,25 +388,25 @@ function uploadImg(){
 
   img.addEventListener('load', () =>{
     //On néttoie le canvas
-    ctx.clearRect(0,0, canvas.width, canvas.height);
+    ctxMeme.clearRect(0,0, canvasMeme.width, canvasMeme.height);
     
     //Le canvas prend les dimensions de l'image à charger
-    canvas.width = img.width;
-    canvas.height = img.height;
+    canvasMeme.width = img.width;
+    canvasMeme.height = img.height;
     texts.forEach(text => {
-      text.x = canvas.width/2;
-      text.y = canvas.height/2;
+      text.x = canvasMeme.width/2;
+      text.y = canvasMeme.height/2;
     });
     //Les extremums des sliders sont définis à partir des dimensions du canvas
     sliderX.min = 0;
-    sliderX.max = canvas.width;
+    sliderX.max = canvasMeme.width;
     sliderY.min = 0;
-    sliderY.max = canvas.height;
+    sliderY.max = canvasMeme.height;
 
     downloadBtn.style.display = 'block';
     textsContainer.style.display = 'flex';
     //On déssine l'image sur le canvas
-    ctx.drawImage(img, 0,0);
+    ctxMeme.drawImage(img, 0,0);
 
     //dès qu'on a choisi un texte on affiche ses options
     textOptions.forEach((text,id) => {
@@ -386,21 +432,21 @@ function uploadImg(){
 
     });
 
-    sliderX.addEventListener('change', ()=> {
+    sliderX.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
     });
 
-    sliderY.addEventListener('change', ()=> {
+    sliderY.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
     });
 
-    memeTextSize.addEventListener('change', ()=> {
+    memeTextSize.addEventListener('input', ()=> {
       const activeText = findActiveText();
       updateTextsObjects(activeText);
       console.log(texts);
@@ -417,7 +463,7 @@ function uploadImg(){
 function downloadMeme(e){
   if(isMeme){
     downloadBtn.download = 'yourMeme.png';
-    downloadBtn.href = canvas.toDataURL();
+    downloadBtn.href = canvasMeme.toDataURL();
   }else{
     e.preventDefault();
     console.log("Vous ne pouvez pas télécharger l'image")

@@ -100,3 +100,22 @@
     text-align: center;
     border: 1px solid black;
 }
+
+.order-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 10px;
+}
+
+.order-button button{
+    margin-top: 15px;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    background-color: #f48c06;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}

@@ -74,7 +74,7 @@
 
 .generator-creation{
     display: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
     min-height: 100%;
 }
 
@@ -85,22 +85,16 @@
     text-align: center;
 }
 
-#generator-canvas{
+#generator-canvas-meme{
     width: 100%;
-    border: 2px solid;
 }
 
 .generator-img-container{
-
+    border: 1px solid black;
     width: 50%;
 
 }
 
-.generator-img-container #generator-img{
-    display: none;
-
-    
-}
 
 .generator-customization-zone{
     width: 45%;

@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Open sans', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+}
+
 html{
     font-family: 'Open sans', sans-serif;
 }
@@ -17,7 +22,9 @@ a{
 }
 
 
-/* --- NAVIGATION --- */
+
+
+/* --- HEADER --- */
 
 #header{
     height:65px;
@@ -89,11 +96,6 @@ a{
 
 
 
-
-@font-face {
-    font-family: 'Open sans', sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-}
 /* --- FOOTER --- */
 
 #footer{
