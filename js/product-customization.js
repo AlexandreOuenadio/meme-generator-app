@@ -117,7 +117,8 @@ displayProduct(id);
   const id = location.href.split('=')[1];
   const canvasChangeEvent = new Event('canvasChange');
   displayProduct(id)
-      .then(()=> {
+      .then((product)=> {
+        document.getElementById('productName').textContent = product.name;
         console.log("produit trouvé et affiché !")
         document.addEventListener('canvasChange', () =>{
           console.log("canvas onchange event activated! ")
@@ -253,6 +254,8 @@ async function displayProduct(id){
       ctxProduct.drawImage(productImg, 0,0);
       console.log("image produit");
   }
+
+  return product
 
 
 
