@@ -3,7 +3,7 @@
 const canvasMeme = document.getElementById('generator-canvas-meme');
 const canvasProduct = document.getElementById('generator-canvas-product');
     //LES CONTEXTES
-const ctxProduct = canvasMeme.getContext('2d');
+const ctxProduct = canvasProduct.getContext('2d');
 const ctxMeme = canvasMeme.getContext('2d');
 
 
@@ -111,8 +111,43 @@ displayProduct(id);
 
 
 
-//--------------------- DEFINITIONS DES EVENENEMENTS --------------------
+//--------------------- PROGRAMME --------------------
+  // ---------- RECHERCHE DU PRODUIT
 
+  const id = location.href.split('=')[1];
+  const canvasChangeEvent = new Event('canvasChange');
+  displayProduct(id)
+      .then(()=> {
+        console.log("produit trouvé et affiché !")
+        document.addEventListener('canvasChange', () =>{
+          console.log("canvas onchange event activated! ")
+          const memeImg = new Image();
+          memeImg.src = canvasMeme.toDataURL();
+          memeImg.onload = () =>{
+            ctxProduct.clearRect(0,0,canvasProduct.width, canvasProduct.height);
+            const productImg = new Image();
+            productImg.src = localStorage.getItem('selectedProductSrc');
+            productImg.onload = () =>{
+              //les dimensions du canvas sont toujours celle du produit selectionné;
+              ctxProduct.drawImage(productImg, 0,0);
+              const dynamicCanvas = document.createElement('canvas');
+              const dynamicContext = dynamicCanvas.getContext("2d");
+              dynamicCanvas.width = memeImg.width;
+              dynamicCanvas.height = memeImg.height;
+              dynamicContext.drawImage(memeImg, 0,0);
+              ctxProduct.drawImage(dynamicCanvas,0,0);
+
+            }
+          }
+          
+        })
+      })
+      .catch((erreur)=> console.error(erreur))
+
+
+
+
+  //---------------------  DEFINITIONS DES EVENENEMENTS 
 //MENU "GENERER OU UPLOADER" 
 generateMenuBtn.addEventListener('click', () => {
     insertMenuBtn.style.pointerEvents = 'none';
@@ -204,12 +239,31 @@ downloadBtn.addEventListener('click', downloadMeme);
 
 
 // ----------- FONCTIONS -----------
+
+async function displayProduct(id){
+  const product = await findProductById(+id);
+  const productImg = new Image();
+  productImg.src = "img/" + product.image;
+  console.log(productImg);
+  localStorage.setItem('selectedProductSrc', productImg.src);
+  productImg.onload = () =>{
+      
+      canvasProduct.width = productImg.width;
+      canvasProduct.height= productImg.height;
+      ctxProduct.drawImage(productImg, 0,0);
+      console.log("image produit");
+  }
+
+
+
+}
+
 async function findProductById(id){
     const reponse = await fetch('../json/boutique.json');
     const produits = await reponse.json();
-    const produit = produits.products.filter(element => element.id === id);
-
-    return produit;
+    const produit = produits.products.filter(element => element.id === +id);
+    console.log(produit[0])
+    return produit[0];
 }
 
 function findActiveText(){
@@ -288,9 +342,6 @@ async function generateMeme(){
   img.crossOrigin = "anonymous";
   img.src = imgURL;
 
-  activeImg = img;
-
-
   img.addEventListener('load', () =>{
     //On néttoie le canvas
     ctxMeme.clearRect(0,0, canvasMeme.width, canvasMeme.height);
@@ -334,6 +385,7 @@ async function generateMeme(){
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
+      document.dispatchEvent(canvasChangeEvent);
 
     });
 
@@ -342,6 +394,7 @@ async function generateMeme(){
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
+      document.dispatchEvent(canvasChangeEvent);
     });
 
     sliderY.addEventListener('input', ()=> {
@@ -349,6 +402,7 @@ async function generateMeme(){
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
+      document.dispatchEvent(canvasChangeEvent);
     });
 
     memeTextSize.addEventListener('input', ()=> {
@@ -356,6 +410,7 @@ async function generateMeme(){
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
+      document.dispatchEvent(canvasChangeEvent);
     });
 
     isMeme = true;
@@ -429,6 +484,7 @@ function uploadImg(){
       updateTextsObjects(activeText);
       console.log(texts);
       updateCanvas(img);
+      canvasMeme.toDataURL()
 
     });
 

@@ -28,13 +28,16 @@
                 <button class="generator-button generator-button-insert">Ajouter un meme téléchargé</button>
             </div>
             <div class="generator-creation" id='generator-creation'>
-                <div class="generator-img-container">
-                    <!-- Canvas Product here-->
-                    <canvas id="generator-canvas-product"></canvas>
-                </div>
-                <div class="generator-img-container">
-                    <!-- Canvas Meme here-->
-                    <canvas id="generator-canvas-meme"></canvas>
+                <div class="generator-imgs-container">
+                    <div class="generator-img-meme-container">
+                        <!-- Canvas Meme here-->
+                        <canvas id="generator-canvas-meme"></canvas>
+                    </div>
+                    <div class="generator-img-product-container">
+                        <!-- Canvas Product here-->
+                        <canvas id="generator-canvas-product"></canvas>
+                    </div>
+                    
                 </div>
                 <div class="generator-customization-zone">
                     
@@ -67,7 +70,7 @@
                                 </div>
                             </div>
                             <input type="text" name="text" id="generator-text" class="geneator-meme-textInput" placeholder="Votre texte ici !" >
-                            <div class="generator-position-container" class='text-position-container' id="text-position-container">
+                            <div class="generator-position-container" id="text-position-container">
                                 <span class="generator-positionText">Paramètres du texte</span>
                                 <div class="generator-rangeSliders-container">
                                     <div class="generator-rangeSliders-item">
@@ -83,11 +86,29 @@
                                         <input type="range" id="meme-text-size" class="generator-rangeSlider">
                                     </div>
                                 </div>
-                            </div>  
+                            </div> 
                         </div>
 
                         <a class="generator-downloadBtn" id="download-btn" onclick="">Télécharger</a>
 
+                    </div> 
+                    <!-- NE S'AFFICHE PAS A RESOUDRE--> 
+                    <div class="generator-position-container" id="memeImg-position-container">
+                        <span class="generator-positionText">Paramètres du meme customisé</span>
+                        <div class="generator-rangeSliders-container">
+                            <div class="generator-rangeSliders-item">
+                                <label for="sliderXMemeImg">Position horizontale</label>
+                                <input type="range" id="sliderXMemeImg" class="generator-rangeSlider">
+                            </div>
+                            <div class="generator-rangeSliders-item">
+                                <label for="sliderYMemeImg">Position verticale</label>
+                                <input type="range" id="sliderYMemeImg" class="generator-rangeSlider">
+                            </div>
+                            <div class="generator-rangeSliders-item">
+                                <label for="meme-text-size-MemeImg">Taille du texte</label>
+                                <input type="range" id="meme-text-size-MemeImg" class="generator-rangeSlider">
+                            </div>
+                        </div>
                     </div>  
                     
 

@@ -1,0 +1,14 @@
+.generator-imgs-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#generator-canvas-meme{
+    border: 1px solid black;
+}
+#generator-canvas-product{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 20px;
+}
