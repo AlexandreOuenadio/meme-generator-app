@@ -21,13 +21,21 @@
     <main class="boutique">
         <div class="boutique-container">
             <h1 class="boutique-title">Boutique</h1>
+            <div class="boutique-filter">
+                <h1 class="boutique-filter-title">Filtrer par prix:</h1>
+                <button class="boutique-filter-button" id="filter-showall" onclick="filterOption(1000)">Tout</button>
+                <button class="boutique-filter-button" id="filter-price-20" onclick="filterOption(15)">15€</button>
+                <button class="boutique-filter-button" id="filter-price-10" onclick="filterOption(10)">10€</button>
+                <button class="boutique-filter-button" id="filter-price-5" onclick="filterOption(5)">5€</button>
+                
+            </div>
             <div id="boutique-product-container">
                 <template id ="boutique-product">
                     <div class="boutique-product-showcase">
                         <a class="product-link" href="product-customization.html?id={{id-Product}}"><img src="img/{{image-Product}}" class="product-image"></a>
                         <div class="product-info">
                             <h1>{{name-Product}}</h1>
-                            <h2>Prix:{{price-Product}}$</h2>
+                            <h2>Prix:{{price-Product}}€</h2>
                         </div>
                     </div>
                 </template>

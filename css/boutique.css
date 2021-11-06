@@ -27,6 +27,35 @@ body{
     background-color: #f48c06;
 }
 
+.boutique-filter{
+    display:flex;
+    margin: 3px 0;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.boutique-filter-title{
+    font-size: 20px;
+    margin:0 10px;
+}
+
+.boutique-filter-button{
+    border:1.5px solid black ;
+    border-radius: 10px;
+    margin:0 4px;
+    padding:3px;
+    background-color:#f3f0ec;
+    
+   
+
+}
+.boutique-filter-button:hover{
+    cursor: pointer;
+    border: 1.5px solid #f48c06;
+
+}
+
+
 #boutique-product-container{
     flex-grow: 3;
     display: grid;
@@ -42,7 +71,9 @@ body{
     align-items: center;
    
 }
-
+.boutique-product-hide{
+    display: none;
+}
 .product-image{
     height: 500px;
     
