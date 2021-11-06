@@ -4,6 +4,7 @@ let template = document.getElementById("boutique-product");
 let grid=document.getElementById("boutique-product-container");
 
 
+
 function cloner(prod){
     clone=template.content.cloneNode(true);
     let img=clone.querySelector("img");
@@ -27,9 +28,24 @@ fetch("json/boutique.json")
 .then(function(json){
     products_json = json.products;
     for (const x of products_json){
-        cloner(x)
+        cloner(x);
     }
 
 });
 
- 
+function filterOption(choice){
+    let newgrid=document.getElementById("boutique-product-container");
+     for (let productDiv of newgrid.getElementsByClassName("boutique-product-showcase")){
+        let priceL=productDiv.getElementsByClassName("product-info")[0].querySelector('h2').textContent;
+        let priceN=priceL.slice(5,priceL.length-1);
+        if (parseInt(priceN,10)>choice){
+            productDiv.style.display="none";
+            console.log(productDiv.style.display)
+        }
+        else{
+            productDiv.style.display="block";
+        }
+            
+        
+     }
+ }

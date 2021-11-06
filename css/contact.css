@@ -1,6 +1,5 @@
-
 body{
-    background-color:  #f3f0ec;
+    background-color: #f3f0ec;
 }
 
 .contact{
@@ -27,7 +26,7 @@ body{
 /*First section --> Contact Informtions*/
 .contact-info{
     height: 100vh;
-    background-color: #f3f0ec;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,8 +100,7 @@ body{
 /*Second section --> Contact us Type box */
 .contact-typebox{
     height:100vh;
-    background-color: #f3f0ec;
-
+    
     
 }
 
