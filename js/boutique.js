@@ -6,7 +6,7 @@ let grid=document.getElementById("boutique-product-container");
 
 
 function cloner(prod){
-    clone=template.content.cloneNode(true);
+    const clone=template.content.cloneNode(true);
     let img=clone.querySelector("img");
     let title=clone.querySelector("h1");
     let price=clone.querySelector("h2");

@@ -41,6 +41,8 @@ const insertBtnFileInput = document.getElementById('generator-insertBtn');
 const positionOptionsLabels = document.querySelectorAll('.generator-text-choice-item label');
 const positionTitle = document.querySelector('.generator-positionText');
 
+const addButtonCart = document.getElementById('add-cart-button');
+
 
 
 
@@ -129,7 +131,9 @@ displayProduct(id);
 
 //--------------------- PROGRAMME --------------------
   // ---------- RECHERCHE DU PRODUIT
-
+  if(!localStorage.getItem('products')){
+    localStorage.setItem('products', '[]');
+  }
   const id = location.href.split('=')[1];
   const canvasChangeEvent = new Event('canvasChange');
   displayProduct(id)
@@ -222,6 +226,20 @@ insertMenuBtn.addEventListener('click', () => {
     
 },true);
 
+//Ajout dans le panier d'un article
+
+addButtonCart.addEventListener('click', async function (){
+  const {name, price} = await findProductById(+id);
+  console.log(name,price);
+  const productImgURL = canvasProduct.toDataURL();
+  const ProductCustomized = new Product(name,price,productImgURL);
+  const localStorageProducts = JSON.parse(localStorage.getItem('products'));
+  console.log(localStorageProducts);
+  localStorageProducts.push(ProductCustomized);
+  localStorage.setItem('products', JSON.stringify(localStorageProducts));
+  location.assign('/panier.html');
+
+})
 
 
 
@@ -238,9 +256,15 @@ insertMenuBtn.addEventListener('click', () => {
 
 
 
+// ----------- Classe -----------
 
-
-
+class Product {
+  constructor(name,price,imgURL){
+      this.name = name;
+      this.price = price;
+      this.imgURL = imgURL;
+  }
+}
 
 
 
@@ -281,7 +305,6 @@ async function findProductById(id){
     const reponse = await fetch('../json/boutique.json');
     const produits = await reponse.json();
     const produit = produits.products.filter(element => element.id === +id);
-    console.log(produit[0])
     return produit[0];
 }
 
@@ -339,6 +362,7 @@ function updateCanvas(img){
 }
 
 async function generateMeme(){
+  addButtonCart.style.display = "block";
   console.log("generation !!!");
   //RESET INPUTS
   texts.forEach(text => {

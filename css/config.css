@@ -109,18 +109,20 @@ a{
 /* --- FOOTER --- */
 
 #footer{
-    height:50px;
+    height:100px;
     width: 100%;
     padding:15px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: white;
+    
 
 }
 
 .footer-container{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -136,20 +138,22 @@ a{
     font-size: 1em;
     margin: 0 10px;
     padding-left: 5px;
-    font-weight: bold;
-    border-left: solid black 2px;
 }
+
 
 .footer-info-container{
     min-width: 25%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items:flex-end;
     justify-content: center;  
 }
+.footer-link:last-child{
+    margin-top: 10px;
+}
 
 .footer-link:hover{
-    color: #f48c06;
+    color: #76c893;
     cursor:pointer;
 }
 
