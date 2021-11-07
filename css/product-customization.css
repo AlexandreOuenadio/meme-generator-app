@@ -5,10 +5,59 @@
     
 }
 #generator-canvas-meme{
-    border: 1px solid black;
+    border: 2px solid #f48c06;
 }
 #generator-canvas-product{
-    border: 1px solid black;
+    border: 2px solid #06bdf4;
     width: 100%;
     margin-top: 20px;
+}
+
+.generator-parameters-container {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.generator-memeImg-position-container{
+    border: 1px solid #06bdf4;
+    padding: 20px;
+}
+
+.generator-positionMemeText{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #06bdf4;
+    text-align: center;
+}
+.generator-rangeSliderMeme {
+    background-color: #06bdf4;
+    appearance: none;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.generator-rangeSliderMeme::-webkit-slider-thumb {
+
+    border: 1px solid #06bdf4;
+    appearance: none;
+    width: 12px; 
+    height: 12px; 
+    background: white; 
+    cursor: pointer;
+    
+  }
+  
+.generator-rangeSliderMeme::-moz-range-thumb {
+    width: 12px; 
+    height: 12px; 
+    background: white; 
+    cursor: pointer; 
+    border: 1px solid #06bdf4;
+
+}
+
+#add-cart-button.btn-style{
+    color: #f40689;
 }

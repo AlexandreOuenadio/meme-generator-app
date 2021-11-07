@@ -10,7 +10,7 @@
 }
 
 .generator-title{
-    background-color: #f48c06;
+    background-color: #76c893;
     color: #fff; 
     text-align: center;
     padding: 15px 0;
@@ -48,7 +48,7 @@
 
 }
 .generator-button-generate{
-    background-color: #f48c06; 
+    background-color: #4895ef; 
 }
 
 .generator-button-insert{
@@ -80,7 +80,7 @@
 
 #generator-mode-title{
     padding: 20px;
-    background-color: #f48c06;
+    background-color: #76c893;
     color: white;
     text-align: center;
 }
@@ -107,15 +107,9 @@
 
     /*-- MEME GENERATE INPUT  --*/ 
 .generator-generateBtn{
-    padding: 0.2em;
-    color: #f48c06;
-    font-weight: bold;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    border: 1px solid;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
+    
+    color: #34a0a4;
+    
 }
 
 #generator-insertBtn{
@@ -155,15 +149,15 @@
     padding: 0.5em;
     display: block;
     width: 100%;
-    border: 1px solid #f48c06;
+    border: 1px solid #76c893;
     display: none;
 }
 
     /*-- RANGE SLIDERS --*/ 
 
-.generator-position-container{
+.generator-text-position-container{
     display: none;
-    border: 1px solid #f48c06;
+    border: 1px solid #76c893;
     padding: 20px;
 }
 
@@ -176,7 +170,7 @@
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 1rem;
-    color: #f48c06;
+    color: #76c893;
     text-align: center;
 }
 .generator-rangeSliders-item{
@@ -192,30 +186,30 @@
 .generator-rangeSliders-item label{
     color: #6c757d;
 }
-.generator-rangeSlider{
+.generator-rangeSliderText{
     appearance: none;
     height: 5px;
     border-radius: 5px;
-    background-color: #f48c06;
+    background-color: #76c893;
 
 }
 
-.generator-rangeSlider::-webkit-slider-thumb {
+.generator-rangeSliderText::-webkit-slider-thumb {
     appearance: none;
     width: 12px; 
     height: 12px; 
     background: white; 
     cursor: pointer; 
-    border: 1px solid #f48c06;
+    border: 1px solid #76c893;
     
   }
   
-.generator-rangeSlider::-moz-range-thumb {
+.generator-rangeSliderText::-moz-range-thumb {
     width: 12px; 
     height: 12px; 
     background: white; 
     cursor: pointer; 
-    border: 1px solid #f48c06;
+    border: 1px solid #76c893;
   }
 
   .generator-rangeSliderBlue::-webkit-slider-thumb {
@@ -241,7 +235,7 @@
     display: none;
     text-align: center;
     padding: 0.2em;
-    color: #f48c06;
+    color: #76c893;
     font-weight: bold;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);

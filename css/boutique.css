@@ -20,11 +20,10 @@ body{
 
 .boutique-title{
     flex-grow: 1;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
-    font-size:3rem;
     color: white;
-    background-color: #f48c06;
+    background-color: #76c893;
 }
 
 .boutique-filter{

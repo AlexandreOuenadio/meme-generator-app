@@ -73,11 +73,11 @@ const texts = [
 
 
 
+//--------------------- PROGRAMME --------------------
+  //--------------------- DEFINITIONS DES EVENENEMENTS --------------------
 
-//--------------------- DEFINITIONS DES EVENENEMENTS --------------------
 
-
-//MENU "GENERER OU UPLOADER" 
+    //MENU "GENERER OU UPLOADER" 
 generateMenuBtn.addEventListener('click', () => {
     insertMenuBtn.style.pointerEvents = 'none';
     orText.style.pointerEvents = 'none';

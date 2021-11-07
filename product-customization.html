@@ -45,8 +45,8 @@
 
                     <div class="generator-parameters-container">
 
-                        <button class="generator-generateBtn" id="generator-generateBtn">Générer un meme</button>
-                        <label for="generator-insertBtn" class="generator-generateBtn"> Uploader votre meme</label>
+                        <button class="generator-generateBtn btn-style" id="generator-generateBtn">Générer un meme</button>
+                        <label for="generator-insertBtn" class="generator-generateBtn btn-style"> Uploader votre meme</label>
                         <input type="file" id="generator-insertBtn">
                         
 
@@ -70,46 +70,46 @@
                                 </div>
                             </div>
                             <input type="text" name="text" id="generator-text" class="geneator-meme-textInput" placeholder="Votre texte ici !" >
-                            <div class="generator-position-container" id="text-position-container">
+                            <div class="generator-text-position-container" id="text-position-container">
                                 <span class="generator-positionText">Paramètres du texte</span>
                                 <div class="generator-rangeSliders-container">
                                     <div class="generator-rangeSliders-item">
                                         <label for="sliderX">Position horizontale</label>
-                                        <input type="range" id="sliderX" class="generator-rangeSlider">
+                                        <input type="range" id="sliderXText" class="generator-rangeSliderText">
                                     </div>
                                     <div class="generator-rangeSliders-item">
                                         <label for="sliderY">Position verticale</label>
-                                        <input type="range" id="sliderY" class="generator-rangeSlider">
+                                        <input type="range" id="sliderYText" class="generator-rangeSliderText">
                                     </div>
                                     <div class="generator-rangeSliders-item">
                                         <label for="meme-text-size">Taille du texte</label>
-                                        <input type="range" id="meme-text-size" class="generator-rangeSlider">
+                                        <input type="range" id="meme-text-size" class="generator-rangeSliderText">
                                     </div>
                                 </div>
                             </div> 
                         </div>
 
-                        <a class="generator-downloadBtn" id="download-btn" onclick="">Télécharger</a>
-
                     </div> 
                     <!-- NE S'AFFICHE PAS A RESOUDRE--> 
-                    <div class="generator-position-container" id="memeImg-position-container">
-                        <span class="generator-positionText">Paramètres du meme customisé</span>
+                    <div class="generator-memeImg-position-container" id="memeImg-position-container">
+                        <span class="generator-positionMemeText">Paramètres du meme customisé</span>
                         <div class="generator-rangeSliders-container">
                             <div class="generator-rangeSliders-item">
                                 <label for="sliderXMemeImg">Position horizontale</label>
-                                <input type="range" id="sliderXMemeImg" class="generator-rangeSlider">
+                                <input type="range" id="sliderXMemeImg" class="generator-rangeSliderMeme">
                             </div>
                             <div class="generator-rangeSliders-item">
                                 <label for="sliderYMemeImg">Position verticale</label>
-                                <input type="range" id="sliderYMemeImg" class="generator-rangeSlider">
+                                <input type="range" id="sliderYMemeImg" class="generator-rangeSliderMeme">
                             </div>
                             <div class="generator-rangeSliders-item">
-                                <label for="meme-text-size-MemeImg">Taille du texte</label>
-                                <input type="range" id="meme-text-size-MemeImg" class="generator-rangeSlider">
+                                <label for="meme-text-size-MemeImg">Taille du meme</label>
+                                <input type="range" step="0.001" id="meme-text-size-MemeImg" class="generator-rangeSliderMeme">
                             </div>
                         </div>
                     </div>  
+
+                    <button id="add-cart-button" class="btn-style">Ajouter au panier</button>
                     
 
                 </div>
