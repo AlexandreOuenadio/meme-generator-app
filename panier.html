@@ -64,22 +64,28 @@
                 </table>
             </div>
             <div class="order-form-container">
-                <form class="order-information" name="Order-info">
+                <form class="order-information" name="Order-info" onsubmit="CalculDistance()">
                     <label class="order-label">Nom*</label>
-                    <input type="text" required="required" name="last-name" id="nom" class="order-text" placeholder="Votre nom ici">
+                    <input type="text" required="required" name="last-name" id="last-name" class="order-text" placeholder="Votre nom ici">
                     <label class="order-label" >Prénom*</label>
-                    <input type="text" required="required" name="first-name" id="nom" class="order-text" placeholder="Votre prénom ici">
+                    <input type="text" required="required" name="first-name" id="first-name" class="order-text" placeholder="Votre prénom ici">
                     <label class="order-label">Adresse mail*</label>
-                    <input type="email" required="required" name="mail" id="nom" class="order-text" placeholder="Votre adresse mail ici">
+                    <input type="email" required="required" name="mail" id="mail" class="order-text" placeholder="Votre adresse mail ici">
                     <label class="order-label">Téléphone*</label>
-                    <input type="text" required="required" pattern="[A-Za-z \s*]" maxlength = "15" name="phone" id="nom" class="order-text" placeholder="Votre téléphone ici">
-                    <label class="order-label">Adresse de livraison*</label>
-                    <input type="text" required="required" name="adress" id="nom" class="order-text" placeholder="Adresse de livraison ici">
+                    <input type="text" required="required"  maxlength = "15" name="phone" id="phone" class="order-text" placeholder="Votre téléphone ici">
+                    <label class="order-label">Pays *</label>
+                    <input type="text" required="required" name="country" id="country" class="order-text" placeholder="Pays de livraison">
+                    <label class="order-label">Code postale*</label>
+                    <input type="text" required="required" name="postalcode" id="postalcode" class="order-text" placeholder="Code Postale de livraison ">
+                    <label class="order-label">Numero de le rue*</label>
+                    <input type="text" required="required" name="adressnumber" id="adressnumber" class="order-text" placeholder="Numero de la rue de livraison">
+                    <label class="order-label">Nom de la rue *</label>
+                    <input type="text" required="required" name="adressname" id="adressname" class="order-text" placeholder="Nom de la rue de livraison">
                     <label class="order-label">Date de livraison*</label>
-                    <input type="date" required="required" name="date" id="nom" class="order-text" placeholder="Date de livraison ici">   
+                    <input type="date" required="required" name="date" id="date" class="order-text" placeholder="Date de livraison ici">   
                     <label class="order-label">Demande de renseignement</label>
-                    <textarea  rows="5" cols="30" name="message" id="message" class="contact-textinput" ></textarea>
-                    <button id="benvoyer">Comfirmer les informations</button>
+                    <textarea  rows="3" cols="30" name="message" id="message" class="contact-textinput" ></textarea>
+                    <button onclick="CalculDistance()">Comfirmer les informations</button>
                 </form>
             </div>
             <div class="order-button">

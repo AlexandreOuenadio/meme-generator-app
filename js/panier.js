@@ -14,9 +14,7 @@ class Cart {
             productSubtotal.textContent = product.price + ",00€";
             const quantity= cloneTemplate.querySelector(".quantityInput");
             
-            quantity.addEventListener('input', () =>{
-                console.log('lolo')
-            })    
+           
                 
             
             document.querySelector('.table-articles').appendChild(cloneTemplate);
@@ -51,6 +49,40 @@ let tax;
 document.getElementById('tax').textContent = tax + "€";
 document.getElementById('total').textContent = total + "€";
 
+function CalculDistance(){
+    let CountryInput= document.getElementById('country').innerHTML;
+    let PostalCodeInput= document.getElementById('postalcode').innerHTML;
+    let ANumberInput= document.getElementById('adressnumber').innerHTML;
+    let ANameInput= document.getElementById('adressname').innerHTML;
+    let Coordinates;
+    FetchCoordinates(CountryInput+PostalCodeInput+ANumberInput+ANameInput+".json");
+    console.log(Coordinates);
+    let distance=FetchDistance(Coordinates);
+    
+}
+
+
+function FetchCoordinates(Adress){
+    fetch("https://api.mapbox.com/geocoding/v5/mapbox.places/3 Rue Victor Grignard 69100 Villeurbanne.json?access_token=pk.eyJ1IjoiZWxpdGVuZXQxMCIsImEiOiJja3ZyNWd6M2c2a2M1MnJvazY2andqbTJoIn0.8lUMtWhONmBdIfm7IaiKyg")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(json){
+        Coordinates=json.features[0].center;
+        
+    })
+    
+}
 
 
 
+function FetchDistance(Coordinates){
+    let MapboxUrl="https://api.mapbox.com/directions/v5/mapbox/driving/"+Coordinates[0]+","+Coordinates[1]+"?geometries=geojson&access_token=pk.eyJ1IjoiZWxpdGVuZXQxMCIsImEiOiJja3ZyNWVhYW4wNGxoMm9tOW94bjhkaTlxIn0.ldlny4HqeBlMz0Om677T5g";
+    fetch(MapboxUrl)
+    .then(function(response){
+           return response.json
+    })
+    .then(function(json){
+        
+    })
+}

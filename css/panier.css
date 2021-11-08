@@ -102,6 +102,8 @@
 }
 
 .order-form-container{
+    min-height: 800px;
+    margin: 10px;
     width: 100%;
     display:flex;
     flex-direction:column ;
@@ -112,7 +114,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2,40%);
-    row-gap: 5%;
+    row-gap: 4%;
     column-gap: 3%;
     justify-content:flex-end;
     align-items:center;
