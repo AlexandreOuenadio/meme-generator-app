@@ -20,52 +20,47 @@
     <header id="header" ></header> 
     <main class="contact">
          
-        
-        <section class="contact-info">
-           
-            <h1 class="contact-title">Contactez-nous</h1>
-            <div class="contact-info-container">
-                <div class="contact-info-square">
-                    <h1 class="contact-square-title">Envoyez-nous un email</h1>
-                    <a href="#section2" class="contact-square-image contact-square-image-mail"></a>
-                    <p class="contact-text">Email: zmichalop@gmail.com</p>
-                </div>
-
-                <div class="contact-info-square">
-                    <h1 class="contact-square-title">Appelez-nous</h1>
-                    <a href="tel:+330783959486" class="contact-square-image contact-square-image-phone"></a>
-                    <p class="contact-text">Tel: +330783959486 </p>
-                </div>
-
-                <div class="contact-info-square">
-                    <h1 class="contact-square-title" >Trouvez-nous</h1>
-                    <iframe id="contact-map" 
-                        style="border:0"
-                        loading="lazy"
-                        allowfullscreen
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfohSBF8EuXri2Vsh6QSsiJzFYJQYAtbM&q=CPE+Lyon">
-                    </iframe>
-                    <p class="contact-text">Adresse: 3 Rue Victor Grignard, 69100 Villeurbanne</p>
-                </div>
+        <h1 class="contact-title">Contactez-nous</h1>
+        <div class="contact-info-container">
+            <div class="contact-info-square">
+                <h2 class="contact-square-title">Envoyez-nous un email</h2>
+                <a href="#section2" class="contact-square-image contact-square-image-mail"></a>
+                <p class="contact-text">Email: zmichalop@gmail.com</p>
             </div>
-        </section>
 
-        <section class="contact-typebox" id="section2">
-            <div class="contact-aboutus">
-                <h1 class="contact-title">A propos</h1>
-                <div class="contact-aboutus-square">
-                    <p class="contact-text">Nous sommes des devellopeurs independants, 
-                        envoyez-nous un commentaire si vous avez aimés ou pas nos produits. 
-                        Tous les commentaires sont pris en compte afin de vous apporter la meilleure expercience possible.</p>
-                </div>
-                <form class="contact-aboutus-square contact-emailbox" action="">
-                    <input type="text" name="mail" id="mail" class="contact-textinput" placeholder="Votre email ici">
-                    <input type="text" name="objet" id="objet" class="contact-textinput" placeholder="L'Objet de l'email ici" value="Objet: Demande de renseignements">
-                    <textarea  rows="5" cols="30" name="message" id="message" class="contact-textinput" >Bonjour, je souhaiterais obtenir des renseignements sur</textarea>
-                    <button id="benvoyer">Envoyer</button>
-                </form>
+            <div class="contact-info-square">
+                <h2 class="contact-square-title">Appelez-nous</h2>
+                <a href="tel:+330783959486" class="contact-square-image contact-square-image-phone"></a>
+                <p class="contact-text">Tel: +330783959486 </p>
             </div>
-        </section>
+
+            <div class="contact-info-square">
+                <h2 class="contact-square-title" >Trouvez-nous</h2>
+                <iframe id="contact-map" 
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfohSBF8EuXri2Vsh6QSsiJzFYJQYAtbM&q=CPE+Lyon">
+                </iframe>
+                <p class="contact-text">Adresse: 3 Rue Victor Grignard, 69100 Villeurbanne</p>
+            </div>
+        </div>
+
+            
+        <div class="contact-aboutus" id="section2">
+            <h2 class="Apropos-title">A propos</h2>
+            <div class="contact-aboutus-square">
+                <p class="contact-aboutus-text">Nous sommes des devellopeurs independants, 
+                    envoyez-nous un commentaire si vous avez aimés ou pas nos produits. 
+                    Tous les commentaires sont pris en compte afin de vous apporter la meilleure expercience possible.</p>
+            </div>
+            <form class="contact-aboutus-square contact-emailbox" name="Email">
+                <input type="text" name="mail" id="mail" class="contact-textinput" placeholder="Votre email ici">
+                <input type="text" name="objet" id="objet" class="contact-textinput" placeholder="L'Objet de l'email ici" value="Objet: Demande de renseignements">
+                <textarea  rows="5" cols="30" name="message" id="message" class="contact-textinput" >Bonjour, je souhaiterais obtenir des renseignements sur</textarea>
+                <button id="benvoyer">Envoyer</button>
+            </form>
+        </div>
 
     </main>
     <footer id="footer"></footer>

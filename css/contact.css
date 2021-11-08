@@ -3,17 +3,17 @@ body{
 }
 
 .contact{
+    min-height: calc(100vh - 65px);
+    background-color: #f3f0ec;
     
-    position: relative;
     
 }
 
 
 .contact-title{
-    margin-top: 50px;
-    padding: 10px;
+    width: 100%;
+    padding: 15px 0;
     text-align: center;
-    font-size:3em;
     color: white;
     background-color: #76c893;
     
@@ -25,12 +25,11 @@ body{
 
 /*First section --> Contact Informtions*/
 .contact-info{
-    height: 100vh;
-    
+    height: calc(100vh - 65px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between ;
+    justify-content: center;
     
      
 }
@@ -39,7 +38,7 @@ body{
 
 .contact-info-container{
     width:100%;
-    height: 90%;
+    height:100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -98,28 +97,36 @@ body{
 
 
 /*Second section --> Contact us Type box */
-.contact-typebox{
-    height:100vh;
-    
+
+
+.Apropos-title{
+    width: 10%;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    background-color: #76c893;
     
 }
 
 
 .contact-aboutus{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items:center;
     
 }
 .contact-aboutus-square{
-    margin:5px  ;
+    margin-bottom:100px  ;
     max-width: 50%;
 }
 
-
+.contact-aboutus-text{
+margin: 20px 0;
+color: #f48c06;
+}
 .contact-emailbox{
     width: 100%;
     height: 50%;
