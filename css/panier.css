@@ -101,6 +101,38 @@
     border: 1px solid black;
 }
 
+.order-form-container{
+    width: 100%;
+    display:flex;
+    flex-direction:column ;
+    align-items: flex-end;
+}
+
+.order-information{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    row-gap: 5%;
+    column-gap: 3%;
+    justify-content:flex-end;
+    align-items:center;
+}
+.order-label{
+    background-color: #76c893;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.order-text{
+    margin:0 10px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
 .order-button{
     display: flex;
     flex-direction: column;

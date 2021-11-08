@@ -69,6 +69,25 @@
                     </tr>
                 </table>
             </div>
+            <div class="order-form-container">
+                <form class="order-information" name="Order-info">
+                    <label class="order-label">Nom*</label>
+                    <input type="text" required="required" name="last-name" id="nom" class="order-text" placeholder="Votre nom ici">
+                    <label class="order-label" >Prénom*</label>
+                    <input type="text" required="required" name="first-name" id="nom" class="order-text" placeholder="Votre prénom ici">
+                    <label class="order-label">Adresse mail*</label>
+                    <input type="email" required="required" name="mail" id="nom" class="order-text" placeholder="Votre adresse mail ici">
+                    <label class="order-label">Téléphone*</label>
+                    <input type="text" required="required" pattern="[A-Za-z \s*]" maxlength = "15" name="phone" id="nom" class="order-text" placeholder="Votre téléphone ici">
+                    <label class="order-label">Adresse de livraison*</label>
+                    <input type="text" required="required" name="adress" id="nom" class="order-text" placeholder="Adresse de livraison ici">
+                    <label class="order-label">Date de livraison*</label>
+                    <input type="date" required="required" name="date" id="nom" class="order-text" placeholder="Date de livraison ici">   
+                    <label class="order-label">Demande de renseignement</label>
+                    <textarea  rows="5" cols="30" name="message" id="message" class="contact-textinput" ></textarea>
+                    <button id="benvoyer">Comfirmer les informations</button>
+                </form>
+            </div>
             <div class="order-button">
                 <p>Vous avez <span id="nb-articles">0</span> article(s) dans votre panier.</p>
                 <button>Passer la commande</button>
