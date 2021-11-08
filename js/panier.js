@@ -22,6 +22,17 @@ class Cart {
             document.querySelector('.table-articles').appendChild(cloneTemplate);
         });
     }
+    static subtotal(products){
+        let subtot = 0;
+        products.forEach((product) => {
+            subtot += product.price;
+        });
+
+        return subtot;
+
+        
+
+    }
 
 
 }
@@ -31,14 +42,14 @@ const nbArticles = document.getElementById('nb-articles');
 nbArticles.textContent = "" + products.length;
 
 Cart.addProducts(products);
+let subtotal = Cart.subtotal(products);
+document.getElementById('subtotal').textContent = subtotal + ",00€";
 
+let tax;
+//let total = subtotal + tax;
 
-
-
-
-
-
-
+document.getElementById('tax').textContent = tax + "€";
+document.getElementById('total').textContent = total + "€";
 
 
 
