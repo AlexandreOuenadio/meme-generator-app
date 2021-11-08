@@ -14,6 +14,17 @@ class Cart {
             document.querySelector('.table-articles').appendChild(cloneTemplate);
         });
     }
+    static subtotal(products){
+        let subtot = 0;
+        products.forEach((product) => {
+            subtot += product.price;
+        });
+
+        return subtot;
+
+        
+
+    }
 
 
 }
@@ -21,19 +32,16 @@ class Cart {
 const products = JSON.parse(localStorage.getItem('products'));
 const nbArticles = document.getElementById('nb-articles');
 nbArticles.textContent = "" + products.length;
+
 Cart.addProducts(products);
+let subtotal = Cart.subtotal(products);
+document.getElementById('subtotal').textContent = subtotal + ",00€";
 
-//BUG à CORRIGER ICI 
-// const quantities = Array.prototype.slice.call(document.getElementsByClassName('quantityInput'));
+let tax;
+//let total = subtotal + tax;
 
-// quantities.forEach((quantity) =>{
-//     quantity.oninput = ()=>{
-//         console.log("lol")
-//     }
-// })
-
-
-
+document.getElementById('tax').textContent = tax + "€";
+document.getElementById('total').textContent = total + "€";
 
 
 
